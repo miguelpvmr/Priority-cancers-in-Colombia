@@ -3,22 +3,304 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Análisis exploratorio de la mortalidad por cáncer de estómago y cáncer de pulmón en Colombia entre 2010 y 2024."
+    >
+
     <title>Cánceres prioritarios en Colombia</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-    <h1>Cánceres prioritarios en Colombia</h1>
 
-    <p>
-        Análisis exploratorio de la mortalidad por cáncer de estómago
-        y cáncer de pulmón en Colombia durante el periodo 2010–2024.
-    </p>
+    <header class="navbar">
+        <div class="nav-container">
+            <a class="brand" href="#inicio">
+                Cánceres prioritarios
+            </a>
 
-    <h2>Análisis exploratorio de datos</h2>
+            <nav class="nav-links">
+                <a href="#datos">Datos</a>
+                <a href="#temporal">Evolución</a>
+                <a href="#demografia">Demografía</a>
+                <a href="#geografia">Geografía</a>
+                <a href="#hallazgos">Hallazgos</a>
+            </nav>
+        </div>
+    </header>
 
-    <p>
-        Este sitio presenta los principales resultados del análisis
-        temporal, demográfico y geográfico de los registros de mortalidad.
-    </p>
+    <main>
+
+        <section class="hero" id="inicio">
+            <div class="hero-content">
+                <span class="eyebrow">Análisis exploratorio de datos · Colombia · 2010–2024</span>
+
+                <h1>
+                    Mortalidad por cáncer de
+                    <span class="text-blue">estómago</span>
+                    y
+                    <span class="text-red">pulmón</span>
+                    en Colombia
+                </h1>
+
+                <p class="hero-description">
+                    Exploración temporal, demográfica y geográfica de los registros
+                    de mortalidad, incorporando información poblacional para comparar
+                    las tasas entre departamentos y grupos de población.
+                </p>
+
+                <div class="hero-actions">
+                    <a class="button primary" href="#datos">
+                        Explorar resultados
+                    </a>
+
+                    <a
+                        class="button secondary"
+                        href="https://github.com/miguelpvmr/Priority-cancers-in-Colombia"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Ver repositorio
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="datos">
+            <div class="section-heading">
+                <span class="section-number">01</span>
+                <div>
+                    <p class="section-kicker">Datos analizados</p>
+                    <h2>Una mirada general al conjunto de datos</h2>
+                    <p>
+                        El análisis se concentra en los registros correspondientes al
+                        periodo 2010–2024 para cáncer de estómago y cáncer de pulmón.
+                    </p>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <article class="stat-card blue">
+                    <p class="stat-label">Cáncer de estómago</p>
+                    <p class="stat-value">76.122</p>
+                    <p class="stat-description">
+                        registros analizados entre 2010 y 2024
+                    </p>
+                </article>
+
+                <article class="stat-card red">
+                    <p class="stat-label">Cáncer de pulmón</p>
+                    <p class="stat-value">67.174</p>
+                    <p class="stat-description">
+                        registros analizados entre 2010 y 2024
+                    </p>
+                </article>
+
+                <article class="stat-card">
+                    <p class="stat-label">Periodo</p>
+                    <p class="stat-value">15</p>
+                    <p class="stat-description">
+                        años incluidos en el análisis
+                    </p>
+                </article>
+
+                <article class="stat-card">
+                    <p class="stat-label">Cobertura territorial</p>
+                    <p class="stat-value">33</p>
+                    <p class="stat-description">
+                        departamentos comparados mediante información poblacional
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section section-alt" id="temporal">
+            <div class="section-heading">
+                <span class="section-number">02</span>
+                <div>
+                    <p class="section-kicker">Evolución temporal</p>
+                    <h2>¿Cómo ha cambiado la mortalidad?</h2>
+                    <p>
+                        Los registros anuales permiten observar la evolución de ambos
+                        tipos de cáncer y posteriormente comparar este comportamiento
+                        utilizando tasas por cada 100.000 habitantes.
+                    </p>
+                </div>
+            </div>
+
+            <div class="visual-placeholder">
+                <div>
+                    <span>Visualización</span>
+                    <h3>Evolución anual de la mortalidad</h3>
+                    <p>
+                        Aquí incorporaremos la gráfica temporal construida durante
+                        el análisis exploratorio.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="demografia">
+            <div class="section-heading">
+                <span class="section-number">03</span>
+                <div>
+                    <p class="section-kicker">Características demográficas</p>
+                    <h2>Edad y sexo</h2>
+                    <p>
+                        La distribución de los registros permite estudiar en qué grupos
+                        de edad se concentra la mortalidad y cómo difiere su comportamiento
+                        entre hombres y mujeres.
+                    </p>
+                </div>
+            </div>
+
+            <div class="two-column">
+                <article class="info-card">
+                    <div class="card-accent blue-accent"></div>
+                    <h3>Cáncer de estómago</h3>
+                    <p>
+                        Los hombres representan una mayor proporción de los registros
+                        y mantienen tasas de mortalidad superiores a las mujeres durante
+                        todo el periodo analizado.
+                    </p>
+                </article>
+
+                <article class="info-card">
+                    <div class="card-accent red-accent"></div>
+                    <h3>Cáncer de pulmón</h3>
+                    <p>
+                        La mortalidad masculina también presenta tasas superiores durante
+                        todo el periodo, aunque la evolución temporal muestra diferencias
+                        entre hombres y mujeres.
+                    </p>
+                </article>
+            </div>
+
+            <div class="visual-placeholder">
+                <div>
+                    <span>Visualización</span>
+                    <h3>Tasas de mortalidad según sexo</h3>
+                    <p>
+                        Esta sección mostrará la evolución anual de las tasas masculinas
+                        y femeninas para ambos tipos de cáncer.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt" id="geografia">
+            <div class="section-heading">
+                <span class="section-number">04</span>
+                <div>
+                    <p class="section-kicker">Distribución geográfica</p>
+                    <h2>La mortalidad no se distribuye de la misma forma en el territorio</h2>
+                    <p>
+                        Los conteos absolutos muestran dónde se concentra el mayor número
+                        de defunciones, mientras que las tasas permiten realizar una
+                        comparación considerando el tamaño de la población departamental.
+                    </p>
+                </div>
+            </div>
+
+            <div class="two-column">
+                <article class="ranking-card">
+                    <p class="ranking-label">Mayor tasa · Estómago</p>
+                    <h3>Quindío</h3>
+                    <p class="ranking-value blue-number">19,44</p>
+                    <p class="ranking-unit">muertes por cada 100.000 habitantes</p>
+                </article>
+
+                <article class="ranking-card">
+                    <p class="ranking-label">Mayor tasa · Pulmón</p>
+                    <h3>Antioquia</h3>
+                    <p class="ranking-value red-number">17,67</p>
+                    <p class="ranking-unit">muertes por cada 100.000 habitantes</p>
+                </article>
+            </div>
+
+            <div class="visual-placeholder large">
+                <div>
+                    <span>Mapa</span>
+                    <h3>Distribución departamental de las tasas de mortalidad</h3>
+                    <p>
+                        Aquí incorporaremos los mapas departamentales de cáncer de
+                        estómago y cáncer de pulmón.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="hallazgos">
+            <div class="section-heading">
+                <span class="section-number">05</span>
+                <div>
+                    <p class="section-kicker">Síntesis</p>
+                    <h2>Principales hallazgos</h2>
+                    <p>
+                        El análisis conjunto de los registros y la información poblacional
+                        permite identificar varios patrones relevantes.
+                    </p>
+                </div>
+            </div>
+
+            <div class="findings-grid">
+                <article class="finding">
+                    <span>01</span>
+                    <h3>Diferencias por sexo</h3>
+                    <p>
+                        Los hombres presentan tasas de mortalidad superiores a las mujeres
+                        para ambos tipos de cáncer durante todo el periodo 2010–2024.
+                    </p>
+                </article>
+
+                <article class="finding">
+                    <span>02</span>
+                    <h3>Conteos y tasas cuentan historias diferentes</h3>
+                    <p>
+                        Los departamentos con mayor número de defunciones no necesariamente
+                        presentan las tasas de mortalidad más altas al considerar su población.
+                    </p>
+                </article>
+
+                <article class="finding">
+                    <span>03</span>
+                    <h3>Diferencias territoriales</h3>
+                    <p>
+                        Quindío y Risaralda adquieren especial relevancia al analizar las
+                        tasas, mientras Antioquia destaca particularmente en cáncer de pulmón.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <strong>Cánceres prioritarios en Colombia</strong>
+                <p>Análisis exploratorio de datos · 2010–2024</p>
+            </div>
+
+            <a
+                href="https://github.com/miguelpvmr/Priority-cancers-in-Colombia"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                GitHub
+            </a>
+        </div>
+    </footer>
+
 </body>
 </html>
