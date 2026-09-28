@@ -16,3 +16,8 @@ venv/
 
 # MyST build outputs
 _build
+
+
+# Data
+Data/
+data/
