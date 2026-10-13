@@ -1,4 +1,3 @@
-# See docs at: https://mystmd.org/guide/frontmatter
 version: 1
 
 project:
@@ -10,6 +9,7 @@ project:
       children:
         - file: notebooks/01 Análisis_Exploratorio.ipynb
         - file: notebooks/02 Análisis_Espacial_Preliminar.ipynb
+        - file: notebooks/03 Cáncer_Pulmón.ipynb
 
 site:
   template: book-theme
