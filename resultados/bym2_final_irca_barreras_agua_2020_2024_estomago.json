@@ -1,0 +1,505 @@
+{
+    "modelo": {
+        "nombre": "BYM2 multivariable final",
+        "periodo": "2020-2024",
+        "cancer": "Estómago",
+        "covariables": [
+            "IRCA",
+            "Barreras de acceso a servicios de salud",
+            "Sin acceso a fuente de agua mejorada"
+        ]
+    },
+    "mcmc": {
+        "chains": 4,
+        "iter_warmup": 1000,
+        "iter_sampling": 1000,
+        "seed": 1234,
+        "adapt_delta": 0.99,
+        "max_treedepth": 15
+    },
+    "estructura_espacial": {
+        "departamentos": 33,
+        "aristas": 74,
+        "scaling_factor": 0.3741200635120181,
+        "island": 28
+    },
+    "parametros_globales": {
+        "alpha": {
+            "media": -0.57086023625,
+            "mediana": -0.5695245,
+            "sd": 0.04532389486698395,
+            "ic95_inferior": -0.6657564,
+            "ic95_superior": -0.48259667500000003
+        },
+        "beta_irca": {
+            "media": -0.127183764386925,
+            "mediana": -0.12563,
+            "sd": 0.106882800718344,
+            "ic95_inferior": -0.341579975,
+            "ic95_superior": 0.07840391750000002
+        },
+        "beta_barreras": {
+            "media": 0.1737974912755,
+            "mediana": 0.1736915,
+            "sd": 0.0771147099434951,
+            "ic95_inferior": 0.021372890000000005,
+            "ic95_superior": 0.326399175
+        },
+        "beta_agua": {
+            "media": -0.7382298257500001,
+            "mediana": -0.7375175,
+            "sd": 0.12043538189361484,
+            "ic95_inferior": -0.98068035,
+            "ic95_superior": -0.50751265
+        },
+        "sigma": {
+            "media": 0.412675056,
+            "mediana": 0.40660050000000003,
+            "sd": 0.06413121348486339,
+            "ic95_inferior": 0.30703997499999997,
+            "ic95_superior": 0.5556003250000001
+        },
+        "rho": {
+            "media": 0.8031772654,
+            "mediana": 0.8628435000000001,
+            "sd": 0.19704363937124,
+            "ic95_inferior": 0.30434845000000005,
+            "ic95_superior": 0.999472225
+        }
+    },
+    "efectos_covariables": {
+        "IRCA": {
+            "sd_original": 8.98,
+            "beta_media": -0.127183764386925,
+            "rr_medio": 0.8856034931974344,
+            "rr_mediano": 0.8819411058230899,
+            "rr_ic95_inferior": 0.7106466316017525,
+            "rr_ic95_superior": 1.0815594321043343,
+            "direccion_evaluada": "negativa",
+            "probabilidad_posterior": 0.88725
+        },
+        "Barreras de acceso": {
+            "sd_original": 1.221,
+            "beta_media": 0.1737974912755,
+            "rr_medio": 1.1933565044611658,
+            "rr_mediano": 1.1896884908559708,
+            "rr_ic95_inferior": 1.021602928506958,
+            "rr_ic95_superior": 1.3859685025717117,
+            "direccion_evaluada": "positiva",
+            "probabilidad_posterior": 0.98675
+        },
+        "Sin acceso a agua mejorada": {
+            "sd_original": 22.732,
+            "beta_media": -0.7382298257500001,
+            "rr_medio": 0.48142659286269507,
+            "rr_mediano": 0.478299822218798,
+            "rr_ic95_inferior": 0.3750558478631687,
+            "rr_ic95_superior": 0.6019910808595528,
+            "direccion_evaluada": "negativa",
+            "probabilidad_posterior": 1.0
+        }
+    },
+    "ajuste": {
+        "D_bar": 271.65477251624293,
+        "p_D": 25.221928855559696,
+        "DIC": 296.8767013718026
+    },
+    "resultados_departamentales": [
+        {
+            "dpto_ccdgo": "66",
+            "departamento": "Risaralda",
+            "observadas": 958,
+            "esperadas": 504.6728236107041,
+            "smr": 1.8982595360414825,
+            "rr_posterior_medio": 1.8944789925,
+            "rr_posterior_mediano": 1.89361,
+            "rr_ic95_inferior": 1.76989475,
+            "rr_ic95_superior": 2.0173695,
+            "prob_rr_mayor_1": 1.0
+        },
+        {
+            "dpto_ccdgo": "63",
+            "departamento": "Quindío",
+            "observadas": 462,
+            "esperadas": 283.58059360124435,
+            "smr": 1.6291664889087556,
+            "rr_posterior_medio": 1.628794475,
+            "rr_posterior_mediano": 1.62671,
+            "rr_ic95_inferior": 1.4897429999999998,
+            "rr_ic95_superior": 1.7793242500000002,
+            "prob_rr_mayor_1": 1.0
+        },
+        {
+            "dpto_ccdgo": "41",
+            "departamento": "Huila",
+            "observadas": 934,
+            "esperadas": 596.9754808214336,
+            "smr": 1.564553369453002,
+            "rr_posterior_medio": 1.5568572724999998,
+            "rr_posterior_mediano": 1.5566,
+            "rr_ic95_inferior": 1.45977775,
+            "rr_ic95_superior": 1.65771825,
+            "prob_rr_mayor_1": 1.0
+        },
+        {
+            "dpto_ccdgo": "11",
+            "departamento": "Bogotá, D.C.",
+            "observadas": 5752,
+            "esperadas": 4013.466514187844,
+            "smr": 1.433175032024395,
+            "rr_posterior_medio": 1.4329792975,
+            "rr_posterior_mediano": 1.4327,
+            "rr_ic95_inferior": 1.39693925,
+            "rr_ic95_superior": 1.4705344999999999,
+            "prob_rr_mayor_1": 1.0
+        },
+        {
+            "dpto_ccdgo": "52",
+            "departamento": "Nariño",
+            "observadas": 1214,
+            "esperadas": 862.3737679312117,
+            "smr": 1.4077422634414318,
+            "rr_posterior_medio": 1.4070507775,
+            "rr_posterior_mediano": 1.4068450000000001,
+            "rr_ic95_inferior": 1.330622,
+            "rr_ic95_superior": 1.488151,
+            "prob_rr_mayor_1": 1.0
+        },
+        {
+            "dpto_ccdgo": "17",
+            "departamento": "Caldas",
+            "observadas": 692,
+            "esperadas": 532.4224284753602,
+            "smr": 1.299719852113677,
+            "rr_posterior_medio": 1.2936801999999998,
+            "rr_posterior_mediano": 1.292915,
+            "rr_ic95_inferior": 1.1995095,
+            "rr_ic95_superior": 1.39202275,
+            "prob_rr_mayor_1": 1.0
+        },
+        {
+            "dpto_ccdgo": "54",
+            "departamento": "Norte de Santander",
+            "observadas": 1062,
+            "esperadas": 848.297860641647,
+            "smr": 1.2519187531567155,
+            "rr_posterior_medio": 1.2510721475,
+            "rr_posterior_mediano": 1.2506849999999998,
+            "rr_ic95_inferior": 1.1779095,
+            "rr_ic95_superior": 1.33078,
+            "prob_rr_mayor_1": 1.0
+        },
+        {
+            "dpto_ccdgo": "73",
+            "departamento": "Tolima",
+            "observadas": 870,
+            "esperadas": 700.4615155342616,
+            "smr": 1.2420382572144977,
+            "rr_posterior_medio": 1.2433827125,
+            "rr_posterior_mediano": 1.24224,
+            "rr_ic95_inferior": 1.15885775,
+            "rr_ic95_superior": 1.32761325,
+            "prob_rr_mayor_1": 1.0
+        },
+        {
+            "dpto_ccdgo": "76",
+            "departamento": "Valle del Cauca",
+            "observadas": 2950,
+            "esperadas": 2383.122403544817,
+            "smr": 1.2378717919029132,
+            "rr_posterior_medio": 1.2384671125,
+            "rr_posterior_mediano": 1.23874,
+            "rr_ic95_inferior": 1.1951665,
+            "rr_ic95_superior": 1.28405825,
+            "prob_rr_mayor_1": 1.0
+        },
+        {
+            "dpto_ccdgo": "19",
+            "departamento": "Cauca",
+            "observadas": 972,
+            "esperadas": 793.0477993586262,
+            "smr": 1.2256512164665239,
+            "rr_posterior_medio": 1.224077005,
+            "rr_posterior_mediano": 1.22366,
+            "rr_ic95_inferior": 1.1492844999999998,
+            "rr_ic95_superior": 1.29931125,
+            "prob_rr_mayor_1": 1.0
+        },
+        {
+            "dpto_ccdgo": "68",
+            "departamento": "Santander",
+            "observadas": 1397,
+            "esperadas": 1197.5385439459562,
+            "smr": 1.1665595291795847,
+            "rr_posterior_medio": 1.1629234350000002,
+            "rr_posterior_mediano": 1.16306,
+            "rr_ic95_inferior": 1.10271525,
+            "rr_ic95_superior": 1.2239440000000001,
+            "prob_rr_mayor_1": 1.0
+        },
+        {
+            "dpto_ccdgo": "15",
+            "departamento": "Boyacá",
+            "observadas": 755,
+            "esperadas": 649.1338356932879,
+            "smr": 1.163088347095087,
+            "rr_posterior_medio": 1.15687852,
+            "rr_posterior_mediano": 1.15562,
+            "rr_ic95_inferior": 1.0744662500000002,
+            "rr_ic95_superior": 1.242133,
+            "prob_rr_mayor_1": 1.0
+        },
+        {
+            "dpto_ccdgo": "18",
+            "departamento": "Caquetá",
+            "observadas": 234,
+            "esperadas": 214.35032811721652,
+            "smr": 1.0916708271705473,
+            "rr_posterior_medio": 1.07504891075,
+            "rr_posterior_mediano": 1.0731549999999999,
+            "rr_ic95_inferior": 0.946013475,
+            "rr_ic95_superior": 1.21112625,
+            "prob_rr_mayor_1": 0.86575
+        },
+        {
+            "dpto_ccdgo": "05",
+            "departamento": "Antioquia",
+            "observadas": 3670,
+            "esperadas": 3467.545251737214,
+            "smr": 1.0583856110201757,
+            "rr_posterior_medio": 1.05799535,
+            "rr_posterior_mediano": 1.05793,
+            "rr_ic95_inferior": 1.0233987500000001,
+            "rr_ic95_superior": 1.0929405,
+            "prob_rr_mayor_1": 0.99975
+        },
+        {
+            "dpto_ccdgo": "50",
+            "departamento": "Meta",
+            "observadas": 500,
+            "esperadas": 572.1801927308871,
+            "smr": 0.8738505917403618,
+            "rr_posterior_medio": 0.8738954397500001,
+            "rr_posterior_mediano": 0.873158,
+            "rr_ic95_inferior": 0.80081725,
+            "rr_ic95_superior": 0.9506169750000001,
+            "prob_rr_mayor_1": 0.00025
+        },
+        {
+            "dpto_ccdgo": "81",
+            "departamento": "Arauca",
+            "observadas": 99,
+            "esperadas": 140.61971788200623,
+            "smr": 0.70402644444978,
+            "rr_posterior_medio": 0.713540786,
+            "rr_posterior_mediano": 0.7119629999999999,
+            "rr_ic95_inferior": 0.5867369,
+            "rr_ic95_superior": 0.8527608250000001,
+            "prob_rr_mayor_1": 0.0
+        },
+        {
+            "dpto_ccdgo": "86",
+            "departamento": "Putumayo",
+            "observadas": 130,
+            "esperadas": 191.5763874612849,
+            "smr": 0.6785804958675886,
+            "rr_posterior_medio": 0.6655165072499999,
+            "rr_posterior_mediano": 0.663978,
+            "rr_ic95_inferior": 0.5593748749999999,
+            "rr_ic95_superior": 0.7851753,
+            "prob_rr_mayor_1": 0.0
+        },
+        {
+            "dpto_ccdgo": "85",
+            "departamento": "Casanare",
+            "observadas": 149,
+            "esperadas": 233.09540401167652,
+            "smr": 0.6392232426536222,
+            "rr_posterior_medio": 0.6493958297500001,
+            "rr_posterior_mediano": 0.6480159999999999,
+            "rr_ic95_inferior": 0.552347275,
+            "rr_ic95_superior": 0.7546459,
+            "prob_rr_mayor_1": 0.0
+        },
+        {
+            "dpto_ccdgo": "25",
+            "departamento": "Cundinamarca",
+            "observadas": 1034,
+            "esperadas": 1696.938269205909,
+            "smr": 0.6093327133719871,
+            "rr_posterior_medio": 0.6143113855,
+            "rr_posterior_mediano": 0.6138805,
+            "rr_ic95_inferior": 0.5786028,
+            "rr_ic95_superior": 0.65146805,
+            "prob_rr_mayor_1": 0.0
+        },
+        {
+            "dpto_ccdgo": "95",
+            "departamento": "Guaviare",
+            "observadas": 21,
+            "esperadas": 43.07667982328885,
+            "smr": 0.48750275290823647,
+            "rr_posterior_medio": 0.5376058352499999,
+            "rr_posterior_mediano": 0.5276335000000001,
+            "rr_ic95_inferior": 0.35931060000000004,
+            "rr_ic95_superior": 0.7589990000000001,
+            "prob_rr_mayor_1": 0.0
+        },
+        {
+            "dpto_ccdgo": "08",
+            "departamento": "Atlántico",
+            "observadas": 707,
+            "esperadas": 1418.8669559140808,
+            "smr": 0.4982849146307219,
+            "rr_posterior_medio": 0.49953003375000005,
+            "rr_posterior_mediano": 0.499145,
+            "rr_ic95_inferior": 0.4630148,
+            "rr_ic95_superior": 0.5361844,
+            "prob_rr_mayor_1": 0.0
+        },
+        {
+            "dpto_ccdgo": "13",
+            "departamento": "Bolívar",
+            "observadas": 512,
+            "esperadas": 1123.0477884195832,
+            "smr": 0.45590223789186707,
+            "rr_posterior_medio": 0.45391425975,
+            "rr_posterior_mediano": 0.4538975,
+            "rr_ic95_inferior": 0.41563422499999997,
+            "rr_ic95_superior": 0.492896725,
+            "prob_rr_mayor_1": 0.0
+        },
+        {
+            "dpto_ccdgo": "20",
+            "departamento": "Cesar",
+            "observadas": 317,
+            "esperadas": 705.1513095162968,
+            "smr": 0.4495489063438714,
+            "rr_posterior_medio": 0.452273735,
+            "rr_posterior_mediano": 0.451772,
+            "rr_ic95_inferior": 0.404515525,
+            "rr_ic95_superior": 0.5026390000000001,
+            "prob_rr_mayor_1": 0.0
+        },
+        {
+            "dpto_ccdgo": "70",
+            "departamento": "Sucre",
+            "observadas": 213,
+            "esperadas": 505.894747275113,
+            "smr": 0.4210361960610899,
+            "rr_posterior_medio": 0.42515568774999996,
+            "rr_posterior_mediano": 0.424796,
+            "rr_ic95_inferior": 0.370813575,
+            "rr_ic95_superior": 0.4819855,
+            "prob_rr_mayor_1": 0.0
+        },
+        {
+            "dpto_ccdgo": "23",
+            "departamento": "Córdoba",
+            "observadas": 401,
+            "esperadas": 981.4619403279942,
+            "smr": 0.40857417238817234,
+            "rr_posterior_medio": 0.40800634025,
+            "rr_posterior_mediano": 0.408056,
+            "rr_ic95_inferior": 0.36985747500000005,
+            "rr_ic95_superior": 0.44792675,
+            "prob_rr_mayor_1": 0.0
+        },
+        {
+            "dpto_ccdgo": "47",
+            "departamento": "Magdalena",
+            "observadas": 282,
+            "esperadas": 759.3882939707097,
+            "smr": 0.37135152363946894,
+            "rr_posterior_medio": 0.37399225475000003,
+            "rr_posterior_mediano": 0.373497,
+            "rr_ic95_inferior": 0.330385675,
+            "rr_ic95_superior": 0.41734575,
+            "prob_rr_mayor_1": 0.0
+        },
+        {
+            "dpto_ccdgo": "88",
+            "departamento": "Archipiélago de San Andrés, Providencia y Santa Catalina",
+            "observadas": 6,
+            "esperadas": 32.14608600340195,
+            "smr": 0.18664791724146554,
+            "rr_posterior_medio": 0.20956998275,
+            "rr_posterior_mediano": 0.20338650000000003,
+            "rr_ic95_inferior": 0.104249225,
+            "rr_ic95_superior": 0.352163375,
+            "prob_rr_mayor_1": 0.0
+        },
+        {
+            "dpto_ccdgo": "91",
+            "departamento": "Amazonas",
+            "observadas": 7,
+            "esperadas": 41.96198172028801,
+            "smr": 0.1668176695433715,
+            "rr_posterior_medio": 0.17694020494999999,
+            "rr_posterior_mediano": 0.1709485,
+            "rr_ic95_inferior": 0.094174415,
+            "rr_ic95_superior": 0.286462025,
+            "prob_rr_mayor_1": 0.0
+        },
+        {
+            "dpto_ccdgo": "27",
+            "departamento": "Chocó",
+            "observadas": 44,
+            "esperadas": 292.765221981437,
+            "smr": 0.1502910752247405,
+            "rr_posterior_medio": 0.1471824067,
+            "rr_posterior_mediano": 0.14638,
+            "rr_ic95_inferior": 0.107816575,
+            "rr_ic95_superior": 0.19248260000000003,
+            "prob_rr_mayor_1": 0.0
+        },
+        {
+            "dpto_ccdgo": "44",
+            "departamento": "La Guajira",
+            "observadas": 66,
+            "esperadas": 515.1530195954649,
+            "smr": 0.1281172729062676,
+            "rr_posterior_medio": 0.12954388707499997,
+            "rr_posterior_mediano": 0.1291745,
+            "rr_ic95_inferior": 0.10105605,
+            "rr_ic95_superior": 0.1609001,
+            "prob_rr_mayor_1": 0.0
+        },
+        {
+            "dpto_ccdgo": "99",
+            "departamento": "Vichada",
+            "observadas": 7,
+            "esperadas": 67.47244215634528,
+            "smr": 0.1037460595213049,
+            "rr_posterior_medio": 0.10444542082499998,
+            "rr_posterior_mediano": 0.0997304,
+            "rr_ic95_inferior": 0.0431739675,
+            "rr_ic95_superior": 0.19563070000000002,
+            "prob_rr_mayor_1": 0.0
+        },
+        {
+            "dpto_ccdgo": "94",
+            "departamento": "Guainía",
+            "observadas": 0,
+            "esperadas": 28.194583520005388,
+            "smr": 0.0,
+            "rr_posterior_medio": 0.07251985885,
+            "rr_posterior_mediano": 0.0681998,
+            "rr_ic95_inferior": 0.02989963,
+            "rr_ic95_superior": 0.13794425000000002,
+            "prob_rr_mayor_1": 0.0
+        },
+        {
+            "dpto_ccdgo": "97",
+            "departamento": "Vaupés",
+            "observadas": 1,
+            "esperadas": 22.01983128340262,
+            "smr": 0.045413608629860255,
+            "rr_posterior_medio": 0.06823826184000001,
+            "rr_posterior_mediano": 0.0634448,
+            "rr_ic95_inferior": 0.025212900000000003,
+            "rr_ic95_superior": 0.13869340000000002,
+            "prob_rr_mayor_1": 0.0
+        }
+    ]
+}
